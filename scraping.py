@@ -98,5 +98,6 @@ def mars_facts():
     return df.to_html(classes="table table-striped")
 
 if __name__ == "__main__":
+
     # If running as script, print scraped data
     print(scrape_all())
