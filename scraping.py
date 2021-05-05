@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup as soup
 import pandas as pd
 import datetime as dt
 from webdriver_manager.chrome import ChromeDriverManager
+import time
 
 
 def scrape_all():
@@ -19,7 +20,10 @@ def scrape_all():
         "news_paragraph": news_paragraph,
         "featured_image": featured_image(browser),
         "facts": mars_facts(),
-        "last_modified": dt.datetime.now()
+        "last_modified": dt.datetime.now(),
+        # "hemispheres" : hemisphere_image_urls
+        "hemispheres": hemisphere_image_urls(browser)
+
     }
 
     # Stop webdriver and return data
@@ -96,6 +100,32 @@ def mars_facts():
 
     # Convert dataframe into HTML format, add bootstrap
     return df.to_html(classes="table table-striped")
+
+def hemisphere_image_urls(browser):
+    # Use browser to visit the URL
+    url = 'https://marshemispheres.com/'
+    browser.visit(url)
+    time.sleep(1)
+
+    # Create alist to hold the titles and images
+    hemisphere_image_urls = []
+
+    try:
+        for hemis in range(0, 4):
+            time.sleep(1)
+            hemispheres= {}
+            browser.find_by_tag('h3')[hemis].click()
+            elem= browser.find_by_text('Sample').first
+            hemispheres['img_url'] = elem['href']
+            hemispheres['title'] = browser.find_by_tag('h2').text
+            hemisphere_image_urls.append(hemispheres)
+            browser.back()
+
+    except AttributeError:
+         return None
+
+    return hemisphere_image_urls
+       
 
 if __name__ == "__main__":
 
