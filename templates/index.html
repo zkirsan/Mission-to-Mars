@@ -25,7 +25,7 @@
         <div class="col-md-12">
           <div class="media">
             <div class="media-body">
-              <h2>Latest Mars News</h2>
+              <h2><strong>Latest Mars News</strong></h2>
               <h4 class="media-heading">{{ mars.news_title }}</h4>
               <p>{{ mars.news_paragraph }}</p>
             </div>
@@ -36,7 +36,7 @@
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
         <div class="col-md-7">
-          <h2>Featured Mars Image</h2>
+          <h2><strong>Featured Mars Image</strong></h2>
 
           <!-- if images is False/None/non-existent, then default to error message -->
           <img
@@ -49,7 +49,7 @@
         <div class="col-md-5">
           <!-- Mars Facts -->
           <div class="row" id="mars-facts" >
-            <h2>Mars Facts</h2>
+            <h2><strong>Mars Facts</strong></h2>
             {{ mars.facts | safe }}
           </div>
         </div>
@@ -58,7 +58,7 @@
       <!-- Section for Mars Hemispheres -->
       <div class="row" id="mars-hemispheres">
         <div class="page-header">
-          <h2 class="text-center">Mars Hemispheres</h2>
+          <h2 class="text-center"><strong>Mars Hemispheres</strong></h2>
         </div>
 
         {% for hemisphere in mars.hemispheres %}
