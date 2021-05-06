@@ -8,19 +8,20 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="background-color: rgb(239, 143, 99);">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
-        <h1>Mission to Mars</h1>
+      <div class="jumbotron text-center" style="background-color: rgb(201, 108, 92);" >
+        <h1 style="color: black" > <strong>Mission to Mars</strong></h1>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <p><a class="btn btn-light black btn-lg btn-block text-danger" href="/scrape" role="button"><strong>Scarepe New Data</strong> </a></p>
       </div>
 
       <!-- Add section for Mars News -->
-      <div class="row" id="mars-news">
+      <div class="row" id="mars-news" >
         <div class="col-md-12">
           <div class="media">
             <div class="media-body">
@@ -34,7 +35,7 @@
 
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
-        <div class="col-md-8">
+        <div class="col-md-7">
           <h2>Featured Mars Image</h2>
 
           <!-- if images is False/None/non-existent, then default to error message -->
@@ -45,7 +46,7 @@
           />
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-5">
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
             <h2>Mars Facts</h2>
@@ -61,10 +62,10 @@
         </div>
 
         {% for hemisphere in mars.hemispheres %}
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="thumbnail">
             <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
-            <div class="caption">
+            <div class="caption" style="background-color: rgb(201, 108, 92);">
               <h3>{{hemisphere.title}}</h3>
             </div>
           </div>
