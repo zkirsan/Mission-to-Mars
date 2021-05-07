@@ -1,10 +1,10 @@
 # Mission-to-Mars
 ## Overview of the Project
 In this challenge, the aim is to create a web application that scrapes data about Mars from various websites. These are;
-   [Lets go to Red Planet Science](https://redplanetscience.com)
-    - https://spaceimages-mars.com
-    - https://galaxyfacts-mars.com
-    - https://marshemispheres.com/
+   - [Red Planet Science](https://redplanetscience.com)
+   - [Space Images](https://spaceimages-mars.com)
+   - [Galaxy Facts- Mars](https://galaxyfacts-mars.com)
+   - [Mars Hemispheres](https://marshemispheres.com/)
 ## Tools for Scraping
     1. Use Splinter to automate a web browser.
     2. Use BeautifulSoup to parse and extract the data.
