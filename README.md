@@ -14,4 +14,4 @@ In this challenge, the aim is to create a web application that scrapes data abou
 ## Summary
 BeautifulSoup and Splinter used to scrape full-resolution images of Mars's hemispheres and titles of those images. Further, those scraped data are stored on the Mongo database. Finally, the data with a scrape button displays the data and the design of the HTML interface. 
 
-    <p align="center"><img src="https://github.com/zkirsan/Mission-to-Mars/blob/main/resources/the_scraping_webpage.png"></img></p>
+<p align="center"><img src="https://github.com/zkirsan/Mission-to-Mars/blob/main/resources/the_scraping_webpage.png"></img></p>
