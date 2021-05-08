@@ -1,6 +1,6 @@
 # Mission-to-Mars
 ## Overview of the Project
-In this challenge, the aim is to create a web application that scrapes data about Mars from various websites. These are;
+In this challenge, the aim is to create a web application that scrapes data about Mars from the various websites. These are;
    - [Red Planet Science](https://redplanetscience.com)
    - [Space Images](https://spaceimages-mars.com)
    - [Galaxy Facts- Mars](https://galaxyfacts-mars.com)
